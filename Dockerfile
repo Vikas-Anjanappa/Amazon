@@ -7,6 +7,5 @@ RUN wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.50/bin/apache-tomc
 RUN tar zxvf apache-tomcat-9.0.50.tar.gz
 RUN cp -rf /apache-tomcat-9.0.50/* /usr/local/tomcat/
 WORKDIR /usr/local/tomcat
-COPY /var/lib/jenkins/workspace/Amazon1/Amazon-Web/target/Amazon.war /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
